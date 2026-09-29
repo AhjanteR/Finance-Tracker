@@ -27,7 +27,7 @@ income = transactions.loc[
   transactions["type"] == "Income", "amount"
 ].sum()
 
-epxenses = transactions.loc[
+expenses = transactions.loc[
   transactions["type"] == "Expense", "amount"
 ].sum()
 
@@ -39,6 +39,7 @@ debt_payments = transactions.loc[
   transactions["type"] == "Debt", "amount"
 ].sum()
 
+# Calculate remaining money
 remaining = income - expenses - savings - debt_payments
 
 # Dashboard
