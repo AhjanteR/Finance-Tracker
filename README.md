@@ -35,3 +35,6 @@ A personal finance dashboard designed to track spending, savings, debt repayment
 
 ## Live Demo
 [Launch the Personal Finance Tracker](https://finance-tracker-79g3dhypigsindnw2jvnte.streamlit.app/)
+
+## Preview
+![Personal Finance Tracker Dashboard](assets/screenshots/dashboard-v1.png)
