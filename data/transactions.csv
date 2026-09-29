@@ -1,13 +1,13 @@
-date, description, category, type, amount
-2026-09-01, Paycheck, Income, Income, 2200.00
-2026-09-02, Rent, Housing, Expense, 900.00
-2026-09-03, Grocery Store, Groceries, Expense, 86.42
-2026-09-05, Netflix, Subscription, Expense, 24.99
-2026-09-06, Train Pass, Transportation, Expense, 120.00
-2026-09-08, Emergency Fund, Savings, Savings, 200.00
-2026-09-12, Dining Out, Dining, Expense, 48.75
-2026-09-15, Paycheck, Income, Income, 2200.00
-2026-09-16, Car, Fund, Savings, Savings, 250.00
-2026-09-18, Electric Bill, Utilities, Expense, 95.30
-2026-09-20, Student Loan, Debt Payment, Debt, 275.00
-2026-09-22, Shopping, Shopping, Expense, 110.50
+date,description,category,type,amount
+2026-09-01,Paycheck,Income,Income,2200.00
+2026-09-02,Rent,Housing,Expense,900.00
+2026-09-03,Grocery Store,Groceries,Expense,86.42
+2026-09-05,Netflix,Subscription,Expense,24.99
+2026-09-06,Train Pass,Transportation,Expense,120.00
+2026-09-08,Emergency Fund,Savings,Savings,200.00
+2026-09-12,Dining Out,Dining,Expense,48.75
+2026-09-15,Paycheck,Income,Income,2200.00
+2026-09-16,Car,Fund,Savings,Savings,250.00
+2026-09-18,Electric Bill,Utilities,Expense,95.30
+2026-09-20,Student Loan,Debt Payment,Debt,275.00
+2026-09-22,Shopping,Shopping,Expense,110.50
