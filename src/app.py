@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TRANSACTIONS_FILE = BASE_DIR / "data" / "transactions.csv"
 
 # Load transaction data
-transactions = pd.read_csv(TRANSACtIONS_FILE)
+transactions = pd.read_csv(TRANSACTIONS_FILE)
 
 #Calculate financial totals
 income = transactions.loc[
