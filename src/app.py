@@ -28,7 +28,7 @@ income = transactions.loc[
 ].sum()
 
 epxenses = transactions.loc[
-  transactions["type"] = "Expense", "amount"
+  transactions["type"] == "Expense", "amount"
 ].sum()
 
 savings = transactions.loc[
