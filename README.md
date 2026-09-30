@@ -38,3 +38,4 @@ A personal finance dashboard designed to track spending, savings, debt repayment
 
 ## Preview
 ![Personal Finance Tracker Dashboard](assets/screenshots/dashboard-v1.png)
+![Personal Finance Tracker Dashboard](assets/screenshots/dashboard-v2.png)
