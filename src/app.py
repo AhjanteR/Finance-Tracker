@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import plotly.express as px
 from pathlib import Path
 
 st.set_page_config(
@@ -59,4 +60,34 @@ st.dataframe(
   transactions,
   use_container_width=True,
   hide_index=True
+)
+
+# Spending analysis
+st.subheader("Spending by Category")
+
+expense_data = transactions[
+  transactions["type"] == "Expense"
+]
+
+category_spending = (
+  expense_data.groupby("category")["amount"]
+  .sum()
+  .reset_index()
+  .sort_values("amount", ascending=False)
+)
+
+spending_chart = px.bar(
+  category_spending,
+  x="category",
+  y="amount",
+  labels={
+    "category": "Category",
+    "amount": "Amount ($)"
+  },
+  title="Expense Breakdown"
+)
+
+st.plotly_chart(
+  spending_chart,
+  use_container_width=True
 )
