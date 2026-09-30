@@ -19,9 +19,11 @@ st.write(
 # Locate the project's data folder
 BASE_DIR = Path(__file__).resolve().parent.parent
 TRANSACTIONS_FILE = BASE_DIR / "data" / "transactions.csv"
+SAVINGS_FILE = BASE_DIR / "data" / "savings.csv"
 
-# Load transaction data
+# Load data
 transactions = pd.read_csv(TRANSACTIONS_FILE)
+savings_goals = pd.read_csv(SAVINGS_FILE)
 
 #Calculate financial totals
 income = transactions.loc[
@@ -91,3 +93,46 @@ st.plotly_chart(
   spending_chart,
   use_container_width=True
 )
+
+# Savings goals
+st.subheader("🎯 Savings Goals")
+
+for _, goal in savings_goals.iterrows():
+
+  goal_name = goal["goal"]
+  target = goal["target_amount"]
+  current = goal["current_amount"]
+
+  if target > 0:
+    progress = min(current / target, 1.0)
+  else:
+    progress = 0
+
+remaining_goal = max(target - current, 0)
+
+st.write(f"**{goal_name}**")
+
+st.progress(progress)
+
+col1, col2, col3 = st.columns(3)
+
+col1.metric(
+  "Saved",
+  f"${current:,.2f}"
+)
+
+col2.metric(
+  "Goal",
+  f"${target:,.2f}"
+)
+
+col3.metric(
+  "Remaining",
+  f"%{remaining_goal:,.2f}"
+)
+
+st.caption(
+  f"{progress:.0%} complete * Target date: {goal['target_date']}"
+)
+
+st.divider()
