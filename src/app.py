@@ -128,7 +128,7 @@ col2.metric(
 
 col3.metric(
   "Remaining",
-  f"%{remaining_goal:,.2f}"
+  f"${remaining_goal:,.2f}"
 )
 
 st.caption(
